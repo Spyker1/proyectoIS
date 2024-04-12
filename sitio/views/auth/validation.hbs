@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar código | Bolsa de Trabajo Canaco</title>
+    <link rel="stylesheet" href="/css/auth/validation.css">
+    <link rel="shortcut icon" href="/images/LogoMenuAzul.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="divLogoCanaco">
+        <img class="LogoCanaco" src="/images/LogoHorizontalAzul.png" alt="">
+    </div>
+
+    <div class="divAllContent">
+        <div class="divValidationTitle">
+            <h1>Código de validación</h1>
+            <p>Por favor ingrese el código de validación que le fué enviado a su correo electrónico</p>
+        </div>
+    
+        <form action="" id="validationForm">
+            <span class="form-label">
+                <input type="text" id="txtValidationEmail"  oninput="validarqe(this)" required maxlength="6">
+                <label>Código de validación</label>
+            </span>
+        </form>
+        <!-- Solicitar nuevo código de validación -->
+       <button id="miBoton" onclick="desactivarBoton()">Solicitar nuevo código de validación</button>
+        <!-- Botón validar código -->
+        <button class="logInButton" id="validateCode">Validar código</button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/front/front_login.js"></script>
+    <script src="/js/codigo_verificacion.js"></script>
+    <script src="/js/front/codigoV.js"></script>
+    <script src="/js/expre_regu.js"></script>
+</body>
+</html>
