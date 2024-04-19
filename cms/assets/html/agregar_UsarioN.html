@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" id="x">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Agregar Nuevo Usario</title>
+</head>
+
+<body id="b">
+    <div class="login-box">
+        <h2 class="animate">Agregar Usario</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Correo Electronico</label>
+            </div>
+            
+            <div class="user-box">
+                <div class="container">
+                <div class="dropdown">
+                    <div class="select">
+                      <span>Seleciona un Rol</span>
+                    </div>
+                    <input type="hidden" name="opc">
+                    <ul class="dropdown-menu">
+                      <li value="Admistrador">Admistrador</li>
+                      <li value="General">General</li>
+                    </ul>
+                  </div>
+                </div>
+              <span class="msg"></span>
+            </div>
+            
+            <br><br>
+            <div class="centrar">   
+                <button id="agregarUsuario" class="as">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Agregar
+                </button>   
+            </div> 
+        </form>
+    </div>
+       
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/opcionesU.js"></script>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS GameCave</title>
+    <link rel="stylesheet" type="text/css" href="excel-2007.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body id="bo">
+    <header id="he">
+      <h1 class="animate-charter">GameCave</h1>
+    </header>
+    <div class="main-container">
+      <div class="sidebar">
+        <button style="width: 250px" class="section-button" data-section="1">
+          Estaditicas
+        </button>
+        <button style="width: 250px" class="section-button" data-section="2">
+          Productos
+        </button>
+        <button style="width: 250px" class="section-button" data-section="3">
+          Clientes
+        </button>
+        <button style="width: 250px" class="section-button" data-section="4">
+          Pedidos
+        </button>
+        <button style="width: 250px" class="section-button" data-section="5">
+          Usarios
+        </button>
+      </div>
+      <div class="content">
+        <div class="section-content" id="section1">
+          Estadísticas de los pedidos , productos y clientes (crear el recuadro
+          donde irán estos)
+        </div>
+
+        <div class="section-content" id="section2">
+          <div class="btnDerecha">
+            <button class="btnCMS">Agregar nuevo producto</button>
+          </div>
+          <table class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Imagen del producto</th>
+                <th>Nombre de producto</th>
+                <th>Cantidad</th>
+                <th>Editar Producto</th>
+                <th>Agregar Cantidad</th>
+                <th>Eliminar Producto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="heading" id="blanco">
+                <td>1</td>
+                <td valign="bottom">
+                  <img
+                    src="data:image/jpeg;base64,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"
+                    alt="aqui una Imagen"
+                  />
+                </td>
+                <td>Ashe</td>
+                <td>1</td>
+                <td><button class="btnCMS">Editar Producto</button></td>
+                <td>
+                  <div class="block_quantity clearfix">      
+                    <div class="block_quantity__chooseBlock">
+                      <button class=" menos"><span class="front">
+                        -
+                      </span></button>
+                      <input class="centrar" name="centrar" type="text" min="1" tabindex="-1" 
+                      value="1" >
+                      <button class=" mas "><span class="front">
+                        +
+                      </span></button> 
+                    </div>
+                  </div>
+                </td>
+                <td><button class="btnEle">Eliminar Producto</button></td>
+              </tr>
+              <tr class="heading" id="naranja">
+                <td>2</td>
+                <td valign="bottom">
+                  <img
+                    src=""
+                    alt="a"
+                  />
+                </td>
+                <td>Kaisa</td>
+                <td>2</td>
+                <td><button class="btnCMS">Editar Producto</button></td>
+                <td>
+                  <div class="block_quantity clearfix">      
+                    <div class="block_quantity__chooseBlock">
+                      <button class=" menos"><span class="front">
+                        -
+                      </span></button>
+                      <input class="centrar" name="centrar" type="text" min="1" tabindex="-1" 
+                      value="1">
+                      <button class=" mas "><span class="front">
+                        +
+                      </span></button> 
+                    </div>
+                  </div>
+                </td>
+                <td><button class="btnEle">Eliminar Producto</button></td>
+              </tr>
+              <tr id="blanco" class="heading">
+                <td>3</td>
+                <td valign="bottom">
+                  <img
+                    src=""
+                    alt="consola xbox"
+                  />
+                </td>
+                <td>Xbox</td>
+                <td>3</td>
+                <td><button class="btnCMS">Editar Producto</button></td>
+                <td>
+                  <div class="block_quantity clearfix">      
+                    <div class="block_quantity__chooseBlock">
+                      <button class=" menos"><span class="front">
+                        -
+                      </span></button>
+                      <input class="centrar" name="centrar" type="text" min="1" tabindex="-1" 
+                      value="1">
+                      <button class=" mas "><span class="front">
+                        +
+                      </span></button> 
+                    </div>
+                  </div>
+                </td>
+                <td><button class="btnEle">Eliminar Producto</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-content" id="section3">
+          <table class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Nombre usario</th>
+                <th>Correo usario</th>
+                <th>Fecha que se registo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="heading" id="blanco">
+                <td>1</td>
+                <td valign="bottom">Gragas Federico Demacia</td>
+                <td valign="bottom">Elver@gmail.com</td>
+                <td valign="bottom">12/08/2023</td>
+                <td valign="bottom">Activo</td>
+              </tr>
+              <tr class="heading" id="naranja">
+                <td>2</td>
+                <td valign="bottom">Garen x Noxus</td>
+                <td valign="bottom">Alma@gmail.com</td>
+                <td valign="bottom">08/12/2020</td>
+                <td valign="bottom">Inactivo</td>
+              </tr>
+              <tr id="blanco" class="heading">
+                <td>3</td>
+                <td valign="bottom">Ashe >>>>>>>>>>>>> Kaisa</td>
+                <td valign="bottom">Elba@gmial.com</td>
+                <td valign="bottom">12/10/2019</td>
+                <td valign="bottom">Activo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-content" id="section4">
+          <table class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Cantidad de productos</th>
+                <th>Nombre de usario</th>
+                <th>Correo del usaio</th>
+                <th>Esado del pedido</th>
+                <th>Lugar de destino del pedido</th>
+                <th>Pago total</th>
+                <th>Renviar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="blanco" id="activo" class="heading">
+                <td>1</td>
+                <td>2</td>
+                <td>Gragas Federico Demacia</td>
+                <td>Elver@gmail.com</td>
+                <td>Enviado</td>
+                <td>Casa de nestor</td>
+                <td>$19,000</td>
+                <td><button class="btnCMS">Renviar</button></td>
+              </tr>
+              <tr id="naranja" id="activo" class="heading">
+                <td>2</td>
+                <td>4</td>
+                <td>Garen x Noxus</td>
+                <td>Alma@gmail.com</td>
+                <td>Entregado</td>
+                <td>Casa de leonardo</td>
+                <td>$129,000</td>
+                <td><button class="btnCMS">Renviar</button></td>
+              </tr>
+              <tr id="blanco" id="activo" class="heading">
+                <td>3</td>
+                <td>14</td>
+                <td>Ashe >>>>>>>>>>>>> Kaisa</td>
+                <td>Elba@gmial.com</td>
+                <td>Entregado</td>
+                <td>Casa Blanca USS</td>
+                <td>$1,290,000</td>
+                <td><button class="btnCMS">Renviar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-content" id="section5">
+          <div class="btnDerecha">
+            <button class="btnCMS">Agregar nuevo usario</button>
+          </div>
+          <table class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="blanco" id="activo" class="heading">
+                <td>1</td>
+                <td>nestor@gmail.com</td>
+                <td>General</td>
+                <td><button class="btnCMS">Actualizar</button></td>
+                <td><button class="btnEle">Eliminar</button></td>
+              </tr>
+              <tr id="naranja" id="activo" class="heading">
+                <td>2</td>
+                <td>leonardo@gmial.com</td>
+                <td>General</td>
+                <td><button class="btnCMS">Actualizar</button></td>
+                <td><button class="btnEle">Eliminar</button></td>
+              </tr>
+              <tr id="blanco" id="activo" class="heading">
+                <td>3</td>
+                <td>alex@gmail.com</td>
+                <td>Admistrador</td>
+                <td><button class="btnCMS">Actualizar</button></td>
+                <td><button class="btnEle">Eliminar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/btnMn.js"></script>
+  </body>
+</html>
