@@ -146,6 +146,8 @@ input {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: auto;
+  position: relative;
 }
 .barras {
   background-color: #58771e;
@@ -159,10 +161,22 @@ input {
 }
 .logos {
   position: absolute;
-  top: 65px;
+  top: 5px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 0;
 } 
+.tamlogo{
+  width: 20vw;
+}
+.escudologo{
+width: 7vw;
+}
+.tablabienvenida{
+  border:2px solid rgb(0, 0, 0);
+  top: 120px;
+  position: relative;
+}
