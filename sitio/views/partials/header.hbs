@@ -1,35 +1,110 @@
-<div id="Navbar">
-    <div class="divMenu">
-        <svg fill="#134B89" width="44px" height="44px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: none;
-                    }
-                </style>
-            </defs>
-            <title>menu</title>
-            <rect x="4" y="24" width="24" height="2.25" />
-            <rect x="4" y="8" width="24" height="2.25" />
-            <rect x="4" y="16" width="24" height="2.25" />
-            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32"
-                height="32" />
-        </svg>
+<header>     
+        <div class="header-container">
+        
+          <a href="/" style="text-decoration: none;"><div style="text-decoration: none;" class="logo" id="animate-charter">GameCave</div></a> 
+      <ul class="navigation">
+      
+
+            {{!-- Categorias inicio --}}
+    <div class="bod">
+      <ul>
+        <li><i class="fas fa-arrow-alt-circle-right"></i> Consolas
+          <ul>
+            <li><a class="filtro" data-filtro="Xbox" data-filtro-p="consola" >Xbox</a></li>
+            <li><a class="filtro" data-filtro="Nintendo" data-filtro-p="consola" >Nintendo</a></li>
+            <li><a class="filtro" data-filtro="Playstation" data-filtro-p="consola" >PlayStation</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="divProfile">
-        <div class="ProfilePic">
-            <!-- LR -->
-            <img src="/images/LicFoto.png" alt="">
+    <div class="bod">
+      <ul>
+        <li><i class="fas fa-arrow-alt-circle-right"></i> Accesorios
+          <ul>
+            <li><a class="filtro" data-filtro="Todos" data-filtro-p="Accesorio" >Todos</a></li>
+             <li><a class="filtro" data-filtro="Xbox" data-filtro-p="Accesorio">Xbox</a></li>
+            <li><a class="filtro" data-filtro="Nintendo" data-filtro-p="Accesorio" >Nintendo</a></li>
+            <li><a class="filtro" data-filtro="Playstation" data-filtro-p="Accesorio" >PlayStation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="bod">
+      <ul>
+        <li><i class="fas fa-arrow-alt-circle-right"></i> Videojuegos
+          <ul>
+            <li><a class="filtro" data-filtro="Todos" data-filtro-p="videojuegos">Todos</a></li>
+            <li><a class="filtro" data-filtro="Xbox" data-filtro-p="videojuegos" >Xbox</a></li>
+            <li><a class="filtro" data-filtro="Nintendo" data-filtro-p="videojuegos" >Nintendo</a></li>
+            <li><a class="filtro" data-filtro="Playstation" data-filtro-p="videojuegos" >PlayStation</a></li>
+            <li><a class="filtro" data-filtro="terror" data-filtro-p="videojuegos" >Terror</a></li>
+            <li><a class="filtro" data-filtro="accion" data-filtro-p="videojuegos">Accion</a></li>
+            <li><a class="filtro" data-filtro="aventura" data-filtro-p="videojuegos" >Aventura</a></li>
+            <li><a class="filtro" data-filtro="fantasia" data-filtro-p="videojuegos" >Fantasia</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="/catalogo-productos"><i class="fas fa-arrow-alt-circle-right"></i>Todos los productos</a></li>
+      </ul>
+    </div>
+      {{!-- Categorias Fin --}}
+
+        
+      </ul>
+
+      {{!-- Comienza la barra de busqueda 
+      <div class="con">
+        <div class="searchInput">
+        <input type="text" id="buscar" placeholder="Buscar..." name="buscar" autocomplete="off"/>
+
+         <div id="sugerencias" class="resultBox"></div>
+
+         </div>
+         </div> --}}
+      <div class="search-container">
+            <input type="text" id="buscar" placeholder="Buscar..." autocomplete="off">
+            <button id="search-button"><img src="/img/search-icon.jpg" alt="Buscar"></button>
+        <div id="sugerencias">
         </div>
-        <svg fill="#134B89" version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="24" height="24">
-            <style type="text/css">
-                .st0 {
-                    fill: none;
-                }
-            </style>
-            <polygon points="16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 " style="stroke:#134B89;" />
-            <rect id="_x3C_Transparent_Rectangle_x3E_" class="st0" width="32" height="32" />
-        </svg>
     </div>
-</div>
+      {{!-- Termeina la barra de busqueda --}}
+
+      {{!-- Comienza Carrito --}}
+
+       <div  class="icon-cart" style="float: left"><a href="/carrito">
+       {{#if usuario}}
+       {{#if (eq CANTIDAD_PRODUCTOS_CARRITO 0)}}
+       {{else}}
+       <div>
+          <span id="cart-count">{{CANTIDAD_PRODUCTOS_CARRITO}}</span>
+       </div>
+       {{/if}}
+       {{else}}
+        
+       {{/if}}
+    <div class="cart-line-1" style="background-color: #ff6600"></div>
+    <div class="cart-line-2" style="background-color: #ff6600"></div>
+    <div class="cart-line-3" style="background-color: #ff6600"></div>
+    <div class="cart-wheel" style="background-color: #ff6600"></div>
+    </a>
+  </div>
+
+    {{#if usuario}}
+      <li ><a href="/mi-cuenta">Mi cuenta</a></li>
+      <li><a href="/cerrar-sesion">Cerrar sesión</a></li>
+    {{else}}
+      <li><a href="/iniciar-sesion">Iniciar Sesión</a></li>
+      <li><a href="/crear-sesion">Crear Cuenta</a></li>
+  {{/if}}
+
+
+    {{!-- Acaba Carrito --}}
+
+      </input>
+      <div id="search-results"></div>
+    </nav>
+        </div>
+        
+    </header>
+    

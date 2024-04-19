@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+ <script src="/js/sweetalert2.all.min.js"></script>
+    <title>Iniciar sesión</title>
+</head>
+
+<body id="inicioS">
+    <header>
+         <button class="btnCasa"><i class="fa fa-home"></i></button>
+        
+    </header>    
+
+    <section id="sectI">
+        <h1 id="hS">Bienvenido de nuevo</h1>
+        <form>
+            <input class="Inse" type="email" id="correo" placeholder="Correo electrónico" autocomplete="off" required autofocus>
+            <input class="Inse"  type="password" id="contraseñaUsuario" placeholder="Contraseña" maxlength="8" autocomplete="off" required autofocus>
+        
+           <div class="contenido">
+
+          <label class="Text-checkbox" id="label">
+            Mostrar contraseña
+          </label>
+          <input type="checkbox" name="opcion" id="checkbox"> 
+
+            </div>
+             
+         <button id="boton">Ingresar</button>
+
+        <div class="signup-link">¿No tienes cuenta? <a href="/crear-sesion">Crear una aquí</a></div>
+        <div class="signup-link">¿Se te olvido la contraseña? <a href="/recuperar-contrasena">Recuperar contraseña</a></div>
+        </form>
+    </section>
+
+
+    <script src="/js/escucharBtn.js"></script>
+    <script src="/js/btn_casa.js"></script>
+    <script src="/js/iniciarSesion.js"></script>
+     <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>
+
+</html>

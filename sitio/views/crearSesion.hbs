@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    />
+ 
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Crear sesión</title>
+
+  </head>
+  
+  <body id="inicioS">
+    
+    <header>
+        <button class="btnCasa"><i class="fa fa-home"></i></button>
+    </header>
+    
+    <section id="sectI">
+      <h1 id="hS">Bienvenido usuario nuevo</h1>
+
+      <form id="formCrearS">
+        <div class="mb-3">
+          <label style="color: red;" for="usuarioNombre" class="form-label">Nombre(s): *</label>
+          <input  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
+          <label style="color: red;" for="usuarioApellido" class="form-label">Apellidos: *</label>
+          <input  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
+        </div>
+        <div class="mb-3">
+          <label style="color: red;" for="usuarioCorreo" class="form-label">Correo: *</label>
+          <input type="email" class="Inse correo" id="usuarioCorreo" required  autocomplete="off" name="CorreoUs"/>
+        </div>
+        <div class="mb-3">
+          <label style="color: red;" for="contraseñaUsuario" class="form-label">Contraseña: *</label>
+          <input type="password" class="Inse form-control" maxlength="8" required autocomplete="off" id="contraseñaUsuario" name="contraUs"/>
+        </div>
+        <div class="contenido">
+
+          <label class="Text-checkbox" id="label">
+            Mostrar contraseña
+          </label>
+          <input type="checkbox" name="opcion" id="checkbox"> 
+
+        </div>
+ 
+        <div class="signup-link">¿Ya tienes cuenta? <a href="/iniciar-sesion"> Click aquí </a></div>
+        
+        <button type="submit" id="boton" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+
+
+    <script src="/js/escucharBtn.js"></script>
+    <script src="/js/crear_sesion.js"></script>
+    <script src="/js/btn_casa.js"></script>
+  <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+
+</html>
