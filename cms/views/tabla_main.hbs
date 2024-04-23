@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  {{>header}}
+   <div class="main-container">
+    <div class="sidebar">
+    {{!-- {{>botones_admin}} --}}
+     </div>
+<div class="content">
+<div class="search-container">
+    <input type="text" id="txtBuscador" placeholder="Buscar en la tabla...">
+    <div class="select-container">
+
+    <select id="searchColumn">
+        <option value="0">Nombre</option>
+        <option value="1">Edad</option>
+        <option value="2">Ciudad</option>
+    </select>
+    <select id="searchColumn2">
+        <option value="0">Nombre</option>
+        <option value="1">Edad</option>
+        <option value="2">Ciudad</option>
+    </select>
+    </div>
+</div>
+    <div id="section2">
+          <div class="btnDerecha">
+            <button class="btnCMS" id="p">Reporte pedidos</button>
+          </div>
+          <div id="divTabla">
+
+          <table id="table" class="tablasCMS">
+            <thead>
+              <tr>
+
+                <th>Id</th>
+                <th>Nombre de cliente</th>
+                <th>Correo del cliente</th>
+                <th>Fecha de realizacion del pedido</th>
+                <th>Pago total</th>
+                <th>Renviar</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="blanco" id="activo" class="heading">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+</div>
+        </div>
+</div>
+      
+        <script src="../js/btn_cerrar_sesion.js"></script>
+        <script src="../js/tabla_pedidos.js"></script>
+        <script src="../js/btn_miCuenta.js"></script>
+         <script src="../js/pedidos.js"></script>
+         <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>

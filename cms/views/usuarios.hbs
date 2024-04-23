@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  {{>header}}
+   <div class="main-container">
+    <div class="sidebar">
+    {{>botones_admin}}
+     </div>
+<div class="content">
+
+
+    <div id="section2">
+    
+    
+          <div class="btnDerecha">
+            <a href="/agregar-usuario"><button class="btnCMS">Agregar nuevo</button></a>
+          </div>
+          <table class="tablasCMS" id="miTabla">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            {{#each usuarios}}
+            <tbody>
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_US}}</td>
+                <td>{{CORREO_US}}</td>
+                <td>{{PUESTO}}</td>
+                <td>
+
+                  <button id="mostrarModal" data-id-us={{ID_US}} class="btnCMS">Actualizar</button>
+                  <div id="miModal-{{ID_US}}" class="modal">
+                    <div class="modal-contenido">
+                      <span class="cerrar-modal" id="cerrarModal-{{ID_US}}">&times;</span>
+                      <h2>Formulario</h2>
+                      <form id="formulario-{{ID_US}}">
+                        <label for="correo">{{CORREO_US}}</label>
+                        <br>
+                       
+                        <label for="rol">Nuevo rol:</label>
+                        <label for="general">General</label>
+                        <input type="radio" id="general-{{ID_US}}" name="rol" value="General">
+                    
+                        <label for="administrador">Administrador</label>
+                        <input type="radio" id="administrador-{{ID_US}}" name="rol" value="Administrador">
+                        <br><br>
+
+                        <input id="prueba" type="submit" value="Enviar" class="botonC">
+                    </div>
+                      </form>
+                    </div>
+                  </div>
+
+                </td>
+                <td><button id="btnEliminarUs" data-id-us={{ID_US}} class="btnEle">Eliminar</button></td>
+              </tr>
+              {{/each}}
+              </table>
+        </div>
+      </div>
+        </div>
+</div>
+        <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Usuarios?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+
+              <script src="../js/btn_cerrar_sesion.js"></script>
+              <script src="../js/btn_abc_us.js"></script>
+              <script src="../js/modal.js"></script>
+              <script src="../js/btn_miCuenta.js"></script>
+              <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>

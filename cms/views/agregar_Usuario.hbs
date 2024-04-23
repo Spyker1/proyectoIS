@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" id="x">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Agregar Nuevo Usario</title>
+</head>
+
+<body id="b">
+   <header>
+         <button class="btnCasa"><i class="fa fa-home"></i></button>
+        
+    </header>   
+
+    <div class="login-box">
+        <h2>Agregar Usario</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" id="nombreUs" autocomplete="off" required>
+                <label>Nombre: *</label>   
+            </div>
+            <div class="user-box">
+                <input type="text" name="" id="apellidosUs" autocomplete="off" required>
+                <label>Apellido(s): *</label>   
+            </div>
+            <div class="user-box">
+                <input type="email" name="" id="correoUs" autocomplete="off" required>
+                <label>Correo electronico: *</label>   
+            </div>
+            <div class="user-box">
+                <input type="text" name="" id="direccion" autocomplete="off" required>
+                <label >Dirección: *</label>
+            </div>
+
+            <div class="user-box">
+                <input type="text" name="" id="telefono" autocomplete="off" oninput="validarNum(this)" required>
+                <label>Telefono: *</label>
+            </div>
+
+            <div class="user-box">
+                <input type="text" name="" id="rfc" autocomplete="off" maxlength="12" required>
+                <label>RFC: *</label>
+            </div>
+            <div class="user-box">
+                <div class="ner">
+                <div class="dropdown">
+                    <div class="select">
+                      <span>Seleciona un Rol *</span>
+                    </div>
+                    <input type="hidden" id='rolOpciones' name="opc">
+                    <ul class="dropdown-menu">
+                      <li value="Administrador">Administrador</li>
+                      <li value="General">General</li>
+                    </ul>
+                  </div>
+                </div>
+              <span class="msg"></span>
+            </div>
+            
+            <br><br>
+            <div class="centrar">   
+                <button id="agregarUsuario" class="as">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Agregar
+                </button>   
+            </div> 
+        </form>
+    </div>
+       
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/restricciones.js"></script>
+<script src="../js/btn_casa.js"></script>
+<script src="../js/opcionesU.js"></script>
+<script src="../js/btn_agregar_us.js"></script>
+<script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</html>

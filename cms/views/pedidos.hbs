@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  {{>header}}
+   <div class="main-container">
+    <div class="sidebar">
+    {{!-- {{>botones_admin}} --}}
+     </div>
+<div class="content">
+
+
+    <div id="section2">
+          <div class="btnDerecha">
+            <button class="btnCMS" id="p">Reporte pedidos</button>
+          </div>
+          <div id="divTabla">
+
+          <table id="table" class="tablasCMS">
+            <thead>
+              <tr>
+
+                <th>Id</th>
+                <th>Nombre de cliente</th>
+                <th>Correo del cliente</th>
+                <th>Fecha de realizacion del pedido</th>
+                <th>Pago total</th>
+                <th>Renviar</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each pedidos}}
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_PED}}</td>
+                <td>{{NOMBRE_CLI}}</td>
+                <td>{{CORREO_CLI}}</td>
+                <td>{{FECHA_PED}}</td>
+                <td>{{PAGO_TOT}}</td>
+                <td><button class="btnCMS" data-id-pedidos={{ID_PED}} id="btn_reenviar_correo_pedidos">Reenviar</button></td>
+                <td><a href="/detalles-pedido/{{ID_PED}}"><button class="btnCMS"
+                      id="btn_detalles_pedidos">Detalles</button></a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          </div>
+</div>
+        </div>
+</div>
+       <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Pedidos?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+
+        <script src="../js/btn_cerrar_sesion.js"></script>
+        <script src="../js/tabla_pedidos.js"></script>
+        <script src="../js/btn_miCuenta.js"></script>
+         <script src="../js/pedidos.js"></script>
+         <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>

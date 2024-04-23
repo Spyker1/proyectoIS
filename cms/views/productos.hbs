@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  {{>header}}
+  <div class="main-container">
+    <div class="sidebar">
+    {{!-- {{>botones_admin}} --}}
+     </div>
+<div class="content">
+
+
+    <div id="section2">
+
+    
+    <div class="btnDerecha">
+            <button class="btnCMS" id="descargarBtn">Reporte productos</button>
+            <a href="/agregar-productos"><button class="btnCMS">Agregar nuevo
+                </button></a>
+    </div>
+    <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                {{!-- <th>Precio del producto</th> --}}
+                {{#if (controlVista puesto)}}
+                <th>Editar</th>
+                <th>Agregar</th>
+                <th>Eliminar</th>
+                {{/if}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each productos}}
+              <tr class="heading" id="blanco">
+                <td>{{ID_PRO}}</td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="producto en venta"
+                    >
+                </td>
+                <td>{{NOM_PRO}}</td>
+                <td>{{CANT_PRO}}</td>
+                {{!-- <td>{{PRECIO_PRO}}</td> --}}
+               
+                <td>
+                  <a href="/actualizar-producto/{{NOM_PRO}}"><button class="btnCMS">Editar producto</button></a>
+                </td>
+                <td>
+                  <div class="block_quantity clearfix">
+                    <div class="block_quantity__chooseBlock">
+                      <button class="menos" id="restar" data-id-agr-pro={{ID_PRO}}>-</button>
+                      <input class="centrar" name="centrar" type="text" min="0"  value="1" oninput="validarNumero(this)"
+                        id="input-agregar-cantidad-{{ID_PRO}}">
+                        <p id="mensaje-error" style="color: red;"></p>
+                      <button class="mas" id="sumar" data-id-agr-pro={{ID_PRO}}>
+                          +
+                        </button>
+                    </div>
+                    <div class="cont">
+                      <button class="btnCMS" id="agregar-cant-pro" data-id-pro={{ID_PRO}}>Agregar </button>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="btnEle" id="eliminar-pro" data-id-pro={{ID_PRO}}>Eliminar</button></td>
+              </tr>
+             
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+        </div>
+</div>
+        <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Productos?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/restricciones.js"></script>
+        <script src="../js/btnMn.js"></script>
+         <script src="../js/btn_abc_pro.js"></script>
+         <script src="../js/btn_miCuenta.js"></script>
+         <script src="../js/tabla_productos.js"></script>
+         <script src="../js/botones_cms.js"></script>
+         <script src="/js/sweetalert2.all.min.js"></script>
+        <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>

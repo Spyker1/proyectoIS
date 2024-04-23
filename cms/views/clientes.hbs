@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body id="bo">
+  {{>header}}
+    <div class="main-container">
+    <div class="sidebar">
+    {{>botones_admin}}
+     </div>
+<div class="content">
+
+
+    <div id="section2">
+    
+
+   
+          <div class="btnDerecha">
+            <button class="btnCMS" id="a">Reporte clientes</button>
+          </div>
+          <div class="centrar">
+
+          
+          <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Fecha de registo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each clientes}}
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_CLI}}</td>
+                <td>{{NOMBRE_CLI}}</td>
+                <td>{{CORREO_CLI}}</td>
+                <td>{{FECHA_ALTA_CLI}}</td>
+                {{#if ACTIVO_CLI }}
+                <td>Activo</td>
+                {{else}}
+                <td>Inactivo</td>
+                {{/if}}
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+     
+</div>
+   </div>
+        </div>
+</div>
+        <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Clientes?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+
+        <script src="../js/btn_cerrar_sesion.js"></script>
+        <script src="../js/tabla_clientes.js"></script>
+        <script src="../js/btn_miCuenta.js"></script>
+        {{!-- <script src="../js/botones_cms.js"></script> --}}
+        <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</body>
+</html>

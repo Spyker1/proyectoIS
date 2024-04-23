@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>{{procesado}}</title>
+</head>
+
+<body class="ut">
+     <header>
+         <button class="btnCasa"><i class="fa fa-home"></i></button>
+        
+    </header>   
+
+
+    <form class="container" id="formularioActulizar" action="">
+        {{#each producto}}
+        <label id="lab" for="nom_pro">Nombre </label>
+         <input class="centrar" name="nom_pro" type="text" rows="4" max="600" id="nom_pro" value="{{NOM_PRO}}">
+         <label id="lab" for="desc_pro" >Descripción </label>
+          <input  class="centrar" id="desc_pro" name="desc_pro" type="text" min="1" tabindex="-1" max="600" value="{{DESC_PRO}}">
+         <label  id="lab" for="prec_pro" >Precio </label>
+         <input class="centrar" id="prec_pro" name="prec_pro" type="numeric" min="1" tabindex="-1" max="600" value="{{PRECIO_PRO}}">
+         <label id="lab" for="color_pro">Color </label>
+
+        <input class="centrar" id="color_pro" name="color_pro" type="text" min="1" tabindex="-1" max="600" value="{{COLOR_PRO}}">
+        <div class="wra">
+        <input id="actualizar-pro" type="submit" value="Actualizar" class="bo" data-nom-pro="{{NOM_PRO}}">
+        </div>
+        {{/each}}
+    </form>
+</body>
+     <script src="../js/btn_actualizar_pro.js"></script>
+     <script src="../js/btn_casa.js"></script>
+    <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+</html>

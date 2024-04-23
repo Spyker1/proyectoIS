@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMS GameCave</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body id="bo">
+  <header id="he">
+    <h1 class="animate-charter">GameCave</h1>
+
+  <div id="miCuentaHeader">
+            <div id="miCuentaButton">Mi cuenta</div>
+            <div id="miCuentaMenu" class="hidden">
+                <ul>
+                    <li><a href="/mi-cuenta">Configuración</a></li>
+                    <li id="cerrarSesionLink">Cerrar sesión</li>
+                </ul>
+            </div>
+        </div>
+
+  </header>
+  <div class="main-container">
+    <div class="sidebar">
+     
+      {{>botones_admin}}
+      
+    </div>
+    <div class="content">
+
+      <div class="content">
+        <div class="section-content" id="section1">
+          
+          <div class="content" >
+              <canvas id="productosVendidos" style="width: 10px; height:10px"></canvas>
+              <button style="width: 100px" class="xd" data-sec="1">a</button>
+              <button style="width: 100px" class="xd" data-sec="2">b</button>
+              <button style="width: 100px" class="xd" data-sec="3">c</button>
+          </div>
+          {{!-- PEDIDOS POR SEMANA --}}
+          <div class="cont" id="sec1">
+              <canvas id="peidosHechosSemana" width="10px" height="10px"></canvas>
+
+          </div>
+          {{!-- PEDIDOS POR AÑO --}}
+          <div class="cont" id="sec2">
+              <canvas id="peidosHechos" width="10px" height="10px"></canvas> 
+              
+          </div>
+          {{!--PEDIDO HECHO POR MES--}}
+          <div class="cont" id="sec3">
+            
+            <canvas id="pedidosHechosMes" width="10px" height="10px"></canvas>
+          </div>
+          {{!-- VENTAS TOTALES POR SEMANA --}}
+          <div >
+            
+              <canvas id="ventasTotalesSemana" width="10px" height="10px"></canvas>
+          </div>
+          {{!-- VENTAS TOTALES POR AÑO --}}
+        <div>
+           <canvas id="ventasTotales" width="10px" height="10px"></canvas>
+        </div>
+        <div>
+          <canvas id="ventasTotalesMes" width="10px" height="10px" ></canvas>
+        </div>
+        </div>
+
+        <div class="section-content" id="section2">
+          <div class="btnDerecha">
+            <button class="btnCMS" id="descargarBtn">Reporte productos</button>
+            <a href="/agregar-producto"><a href="/agregar-productos"><button class="btnCMS">Agregar nuevo
+                  producto</button></a></a>
+          </div>
+          <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                {{!-- <th>Precio del producto</th> --}}
+                {{#if (controlVista puesto)}}
+                <th>Editar</th>
+                <th>Agregar</th>
+                <th>Eliminar</th>
+                {{/if}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each productos}}
+              <tr class="heading" id="blanco">
+                <td>{{ID_PRO}}</td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="producto en venta"
+                    alt="">
+                </td>
+                <td>{{NOM_PRO}}</td>
+                <td>{{CANT_PRO}}</td>
+                {{!-- <td>{{PRECIO_PRO}}</td> --}}
+               
+                <td>
+                  <a href="/actualizar-producto/{{NOM_PRO}}"><button class="btnCMS">Editar producto</button></a>
+                </td>
+                <td>
+                  <div class="block_quantity clearfix">
+                    <div class="block_quantity__chooseBlock">
+                      <button class="menos" id="restar" data-id-agr-pro={{ID_PRO}}>-</button>
+                      <input class="centrar" name="centrar" type="text" min="0"  value="1" oninput="validarNumero(this)"
+                        id="input-agregar-cantidad-{{ID_PRO}}">
+                        <p id="mensaje-error" style="color: red;"></p>
+                      <button class="mas" id="sumar" data-id-agr-pro={{ID_PRO}}>
+                          +
+                        </button>
+                    </div>
+                    <div class="cont">
+                      <button class="btnCMS" id="agregar-cant-pro" data-id-pro={{ID_PRO}}>Agregar</button>
+                    </div>
+                  </div>
+                </td>
+                <td><button class="btnEle" id="eliminar-pro" data-id-pro={{ID_PRO}}>Eliminar</button></td>
+              </tr>
+             
+              {{/each}}
+            </tbody>
+          </table>
+
+           <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Productos?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+        </div>
+
+        <div class="section-content" id="section3">
+          <div class="btnDerecha">
+            <button class="btnCMS" id="a">Reporte clientes</button>
+          </div>
+          <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Fecha de registo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each clientes}}
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_CLI}}</td>
+                <td>{{NOMBRE_CLI}}</td>
+                <td>{{CORREO_CLI}}</td>
+                <td>{{FECHA_ALTA_CLI}}</td>
+                {{#if ACTIVO_CLI }}
+                <td>Activo</td>
+                {{else}}
+                <td>Inactivo</td>
+                {{/if}}
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-content" id="section4">
+          <div class="btnDerecha">
+            <button class="btnCMS" id="p">Reporte pedidos</button>
+          </div>
+          <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+
+                <th>Id</th>
+                <th>Nombre de cliente</th>
+                <th>Correo del cliente</th>
+                <th>Fecha de realización del pedido</th>
+                <th>Pago total</th>
+                <th>Renviar</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each pedidos}}
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_PED}}</td>
+                <td>{{NOMBRE_CLI}}</td>
+                <td>{{CORREO_CLI}}</td>
+                <td>{{FECHA_PED}}</td>
+                <td>{{PAGO_TOT}}</td>
+                <td><button class="btnCMS" data-id-pedidos={{ID_PED}} id="btn_reenviar_correo_pedidos">Reenviar</button></td>
+                <td><a href="/detalles-pedido/{{ID_PED}}"><button class="btnCMS"
+                      id="btn_detalles_pedidos">Detalles</button></a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-content" id="section5">
+          <div class="btnDerecha">
+            <a href="/agregar-usuario"><button class="btnCMS">Agregar nuevo usario</button></a>
+          </div>
+          <table class="tablasCMS">
+            <thead>
+              <tr>
+                <th class="heading">&nbsp;</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each usuarios}}
+
+              <tr id="blanco" id="activo" class="heading">
+                <td>{{ID_US}}</td>
+                <td>{{CORREO_US}}</td>
+                <td>{{PUESTO}}</td>
+                <td>
+
+                  <button id="mostrarModal" data-id-us={{ID_US}} class="btnCMS">Actualizar</button>
+                  <div id="miModal-{{ID_US}}" class="modal">
+                    <div class="modal-contenido">
+                      <span class="cerrar-modal" id="cerrarModal-{{ID_US}}">&times;</span>
+                      <div class="centrar">
+                      <h2>Actualizar Rol</h2>
+                      <form id="formulario-{{ID_US}}">
+                        <label for="correo">{{CORREO_US}}</label>
+                        <br>
+                       
+                        <label for="rol">Nuevo rol:</label>
+                        <label for="general">General</label>
+                        <input type="radio" id="general-{{ID_US}}" name="rol" value="General">
+                    
+                        <label for="administrador">Administrador</label>
+                        <input type="radio" id="administrador-{{ID_US}}" name="rol" value="Administrador">
+                        <br><br>
+
+                        <input id="prueba" type="submit" value="Enviar" class="botonC">
+                    </div>
+                      </form>
+                    </div>
+                  </div>
+                </td>
+                <td><button id="btnEliminarUs" data-id-us={{ID_US}} class="btnEle">Eliminar</button></td>
+              </tr>
+              {{/each}}
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              <script src="../js/restricciones.js"></script>
+              <script src="../js/script.js"></script>
+              <script src="../js/graficas.js"></script>
+              <script src="../js/btnMn.js"></script>
+              <script src="../js/btn_cerrar_sesion.js"></script>
+              <script src="../js/btn_abc_us.js"></script>
+              <script src="../js/descargarT.js"></script>
+              <script src="../js/modal.js"></script>
+              <script src="../js/btn_abc_pro.js"></script>
+              <script src="../js/btn_miCuenta.js"></script>
+              <script src="../js/brnCa.js"></script>
+              <script src="../js/pedidos.js"></script>
+              <script src="../js/botones_cms.js"></script>
+</body>
+
+</html>
