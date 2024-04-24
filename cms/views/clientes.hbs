@@ -21,7 +21,7 @@
 
    
           <div class="btnDerecha">
-            <button class="btnCMS" id="a">Reporte clientes</button>
+            <button class="btnCMS" id="a">Reporte solicitantes</button>
           </div>
           <div class="centrar">
 
@@ -33,6 +33,7 @@
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Fecha de registo</th>
+                <th>Cuidad</th>
                 <th>Estado</th>
               </tr>
             </thead>
@@ -43,6 +44,7 @@
                 <td>{{NOMBRE_CLI}}</td>
                 <td>{{CORREO_CLI}}</td>
                 <td>{{FECHA_ALTA_CLI}}</td>
+                <td>{{CUIDAD_CLI}}</td>
                 {{#if ACTIVO_CLI }}
                 <td>Activo</td>
                 {{else}}

@@ -12,13 +12,13 @@ guardarProductoBtn.addEventListener('click', function () {
 
     const data = {
     nombreProducto: document.getElementById('nombreProducto').value,
-    cantidad: document.getElementById('cantidad').value,
-    precio: document.getElementById('precio').value,
+    // cantidad: document.getElementById('cantidad').value,
+    // precio: document.getElementById('precio').value,
     des: document.getElementById('descrip').value,
-    color: document.getElementById('color').value,
-    marca: document.getElementById('marca').value,
-    genero: document.getElementById('gen').value,
-    tipo: document.getElementById('tipo').value
+    // color: document.getElementById('color').value,
+    // marca: document.getElementById('marca').value,
+    // genero: document.getElementById('gen').value,
+    // tipo: document.getElementById('tipo').value
     }
     fetch('/rt-agregar-producto', {
         method: 'POST',

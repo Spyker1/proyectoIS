@@ -37,7 +37,7 @@ function exportarTabla(){
     a.href = URL.createObjectURL(blob);
     const date = new Date().toLocaleDateString()
     const fechaFormat=date.replaceAll('/','-')
-    a.download = `Clientes ${fechaFormat}.xls`; // Nombre del archivo Excel
+    a.download = `Solicitantes ${fechaFormat}.xls`; // Nombre del archivo Excel
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();

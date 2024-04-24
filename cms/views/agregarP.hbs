@@ -26,20 +26,6 @@
             <input type="text" id="nombreProducto" autocomplete="off" required >
         </div>
 
-        <div class="form-group">
-            <label style="color: red;" for="cantidad">Cantidad: *</label>
-            <input type="text" id="cantidad" autocomplete="off" oninput="validarNum(this)" required>
-        </div>
-
-        <!-- Input de precio con signo de pesos mexicanos (MXN) predefinido -->
-        <div class="form-group">
-            <label style="color: red;"  for="precio">Precio: *</label>
-            <div class="precio-input">
-                <span>MXN $</span>
-                <input type="text" id="precio" autocomplete="off" oninput="validarNumero(this)" required>
-            </div>
-        </div>
-
         <!-- Descripcion del producto -->
 
         <div class="form-group">
@@ -47,69 +33,14 @@
             <textarea name="descrip" id="descrip" cols="60" rows="10" autocomplete="off" maxlength="600" required></textarea>
         </div>
 
-        <!-- Elegir color del producto -->
-        <div class="form-group">
-            <label for="color">Color:</label>
-            <select class="selecion" id="color" required>
-                <option value="">Seleccionar</option>
-                <option value="Rojo">Rojo</option>
-                <option value="Azul">Azul</option>
-                <option value="Verde">Verde</option>
-                <option value="Negro">Negro</option>
-                <option value="Blanco">Blanco</option>
-                <option value="Otro">Otro</option>
-            </select>
-            <input type="text" id="colorOtro" autocomplete="off" placeholder="Especificar color" style="display: none;" disabled>
-        </div>
-
-        <!-- Marca del producto -->
-        <div class="form-group">
-            <label style="color: red;"  for="marca">Marca: *</label>
-            <select class="selecion" id="marca" required>
-                <option value="">Seleccionar</option>
-                <option value="Xbox">Xbox</option>
-                <option value="PlayStation">PlayStation</option>
-                <option value="Nintendo">Nintendo</option>
-                <option value="Otro">Otro</option>
-            </select>
-            <input type="text" id="marcaOtro" autocomplete="off" style="display: none;" placeholder="Especificar marca" disabled>
-        </div>
-
-        <!-- Genero del producto -->
-        <div class="form-group">
-            <label for="gen">Género del producto:</label>
-            <select class="selecion" id="gen" required>
-                <option value="">Seleccionar</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Acción">Acción</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Estrategia">Estrategia</option>
-                <option value="Fantasia">Fantasia</option>
-                <option value="Otro">Otro</option>
-            </select>
-            <input type="text" id="genOtro" autocomplete="off" style="display: none;" placeholder="Especificar género" disabled>
-        </div>
-
-        <!-- Tipo de producto -->
-        <div class="form-group">
-            <label  style="color: red;" for="tipo">Tipo: *</label>
-            <select class="selecion" id="tipo" required>
-                <option value="">Seleccionar</option>
-                <option value="Accesorio">Accesorios</option>
-                <option value="Consola">Consola</option>
-                <option value="Videojuegos">Videojuegos</option>
-                <option value="Otro">Otro</option>
-            </select>
-            <input type="text" id="tipoOtro" autocomplete="off" style="display: none;" placeholder="Especificar tipo" disabled>
-        </div>
-
+       
         <button type="button" id="guardarProducto" class="btn">Guardar</button>
     </form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../js/restricciones.js"></script>
-<script src="../js/inputOculto.js"></script>
+{{!-- <script src="../js/inputOculto.js"></script> --}}
 <script src="../js/guardarP.js"></script>
 <script src="../js/btn_pro.js"></script>
 <script src="../js/btn_casa.js"></script>
