@@ -65,6 +65,7 @@
   img {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f7f7f7;
   }
   
   .header-container {
@@ -264,16 +265,14 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
 }
 
 #sectI {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    padding: 35px;
-    width: 450px;
-    z-index: 1;
+    padding: 40px;
+    width: 350px;
 }
 
 #hS {
@@ -307,7 +306,7 @@
 }
 
 #boton {
-    background-color: #328e13;
+    background-color: #ff6600;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -687,7 +686,7 @@ li:hover{
 }
 /* MI CUENTA NO MOVER HASTA QUE ESTE COMENTARIO DESAPAREZCA */
 
-.contenedor0{
+.contenedor{
   max-width: 800px;
 }
 
@@ -1697,4 +1696,3 @@ ul {
 #cuenta > a{
   text-decoration: none;
 }
-

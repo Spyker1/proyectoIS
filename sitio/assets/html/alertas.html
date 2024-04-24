@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con SweetAlert2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+</head>
+<body>
+    <button onclick="showCustomAlert()">Mostrar Alerta Personalizada</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function showCustomAlert() {
+            Swal.fire({
+                title: '¡Mensaje Personalizado!',
+                text: 'Este es un mensaje personalizado con estilo CSS',
+                icon: 'success',
+                confirmButtonColor: '#007BFF',
+                customClass: {
+                    popup: 'my-custom-popup-class',
+                    title: 'my-custom-title-class',
+                    content: 'my-custom-content-class',
+                }
+            });
+        }
+    </script>
+    
+    <style>
+        /* Estilos personalizados */
+        .my-custom-popup-class {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .my-custom-title-class {
+            color: #007BFF;
+        }
+
+        .my-custom-content-class {
+            font-size: 18px;
+        }
+    </style>
+</body>
+</html>

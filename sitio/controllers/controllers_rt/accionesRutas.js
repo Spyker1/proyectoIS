@@ -17,7 +17,7 @@ console.log('hola')
     from: 'netoilluminati258@gmail.com',
     to: 'alexrdz1221@gmail.com',
     cc: 'basn160603@gmail.com, leonardo.cantulara@hotmail.com',
-    bcc: 'armandi.cantu@gmail.com, alexrdz122@gmail.com',
+    bcc: 'armandi.cantu@gmail.com',
     subject: 'Formulario de contacto - GameCave',
     html: `<h2>Nombre completo: ${nombreCompleto}\nCorreo electrónico: ${correoElectronico}\nInformación: ${informacion}</h2>`
   };

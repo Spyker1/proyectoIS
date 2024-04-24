@@ -8,6 +8,8 @@ btn_actualizar_pro.addEventListener('click',async(event)=>{
     const data={
         nombre_producto:document.getElementById('nom_pro').value,
         descripcion_pro:document.getElementById('desc_pro').value,
+        precio_pro:document.getElementById('prec_pro').value,
+        color_pro:document.getElementById('color_pro').value,
         nom_pro
     }
     await fetch('/rt-actulizar-datos-producto',{

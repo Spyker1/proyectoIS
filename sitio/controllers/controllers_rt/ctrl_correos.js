@@ -21,7 +21,7 @@ const contra = ( req = request, res = response) =>{
     const optCorreo = {
       from: 'netoilluminati258@gmail.com',
       to: correoLlegada,
-      subject: 'Cartilla Militar',
+      subject: 'GameCave',
       text: 'Este es el contenido del correo.',
     };
   
