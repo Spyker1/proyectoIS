@@ -26,9 +26,11 @@
       <form id="formCrearS">
         <div class="mb-3">
           <label style="color: red;" for="usuarioNombre" class="form-label">Nombre(s): *</label>
-          <input  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
+          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
+          <br>
           <label style="color: red;" for="usuarioApellido" class="form-label">Apellidos: *</label>
-          <input  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
+          <br>
+          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
         </div>
         <div class="mb-3">
           <label style="color: red;" for="usuarioCorreo" class="form-label">Correo: *</label>
@@ -56,6 +58,7 @@
 
     <script src="/js/escucharBtn.js"></script>
     <script src="/js/crear_sesion.js"></script>
+    <script src="../js/restricciones.js"></script>
     <script src="/js/btn_casa.js"></script>
   <script src="/js/sweetalert2.all.min.js"></script>
     <script src="/js/sweetalert2.min.js"></script>
