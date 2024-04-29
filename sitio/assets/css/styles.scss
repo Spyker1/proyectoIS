@@ -180,3 +180,35 @@ width: 7vw;
   top: 120px;
   position: relative;
 }
+.login-box {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-box input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #58771e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.top-images {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}   
