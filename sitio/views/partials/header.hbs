@@ -1,35 +1,19 @@
 <header>     
         <div class="header-container">
         
-          <a href="/" style="text-decoration: none;"><div style="text-decoration: none;" class="logo" id="animate-charter">GameCave</div></a> 
+          <a href="/" style="text-decoration: none;"><div style="text-decoration: none;" class="logo" id="animate-charter"><img data-v-27b47ae7="" src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" alt="logo gobierno de méxico" class="logos" style="width: 8rem; margin-top: -2%; margin-bottom: -2%; margin-left: -15%;"></div></a>
+          {{!-- <img data-v-27b47ae7="" src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" alt="logo gobierno de méxico" class="logos" style="width: 8rem; margin-top: -2%; margin-bottom: -2%; margin-left: -15%;"> --}}
       <ul class="navigation">
       
 
-            {{!-- Categorias inicio --}}
+     
     <div class="bod">
       <ul>
-        <li><i class="fas fa-arrow-alt-circle-right"></i> Consolas
+        <li><i class="fas fa-arrow-alt-circle-right"></i> Subir Documentos
           <ul>
-            <li><a class="filtro" data-filtro="Xbox" data-filtro-p="consola" >Xbox</a></li>
-            <li><a class="filtro" data-filtro="Nintendo" data-filtro-p="consola" >Nintendo</a></li>
-            <li><a class="filtro" data-filtro="Playstation" data-filtro-p="consola" >PlayStation</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
-    <div class="bod">
-      <ul>
-        <li><i class="fas fa-arrow-alt-circle-right"></i> Accesorios
-          <ul>
-            <li><a class="filtro" data-filtro="Todos" data-filtro-p="Accesorio" >Todos</a></li>
-             <li><a class="filtro" data-filtro="Xbox" data-filtro-p="Accesorio">Xbox</a></li>
-            <li><a class="filtro" data-filtro="Nintendo" data-filtro-p="Accesorio" >Nintendo</a></li>
-            <li><a class="filtro" data-filtro="Playstation" data-filtro-p="Accesorio" >PlayStation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="bod">
+    {{!-- <div class="bod">
       <ul>
         <li><i class="fas fa-arrow-alt-circle-right"></i> Videojuegos
           <ul>
@@ -47,7 +31,7 @@
       <ul>
         <li><a href="/catalogo-productos"><i class="fas fa-arrow-alt-circle-right"></i>Todos los productos</a></li>
       </ul>
-    </div>
+    </div> --}}
       {{!-- Categorias Fin --}}
 
         
@@ -62,17 +46,17 @@
 
          </div>
          </div> --}}
-      <div class="search-container">
+      {{!-- <div class="search-container">
             <input type="text" id="buscar" placeholder="Buscar..." autocomplete="off">
             <button id="search-button"><img src="/img/search-icon.jpg" alt="Buscar"></button>
         <div id="sugerencias">
         </div>
-    </div>
+    </div> --}}
       {{!-- Termeina la barra de busqueda --}}
 
       {{!-- Comienza Carrito --}}
 
-       <div  class="icon-cart" style="float: left"><a href="/carrito">
+       {{!-- <div  class="icon-cart" style="float: left"><a href="/carrito">
        {{#if usuario}}
        {{#if (eq CANTIDAD_PRODUCTOS_CARRITO 0)}}
        {{else}}
@@ -88,9 +72,14 @@
     <div class="cart-line-3" style="background-color: #ff6600"></div>
     <div class="cart-wheel" style="background-color: #ff6600"></div>
     </a>
-  </div>
+  </div> --}}
 
     {{#if usuario}}
+      <li ><a href="/Acta_Nacimiento">Acta de naciento</a></li>
+      <li ><a href="/Com_Domici"></a>Comprobante de domicilio</li>
+      <li ><a href="/Com_Estudios"></a>Comprobante grado maximo de estudios</li>
+      <li ><a href="/CURP"></a>CURP</li>
+      <li ><a href="/Fotos"></a>Fotografias</li>
       <li ><a href="/mi-cuenta">Mi cuenta</a></li>
       <li><a href="/cerrar-sesion">Cerrar sesión</a></li>
     {{else}}

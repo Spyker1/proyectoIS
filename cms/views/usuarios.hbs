@@ -26,9 +26,11 @@
             <thead>
               <tr>
                 <th class="heading">&nbsp;</th>
+                <th>Nombre</th>
                 <th>Correo</th>
-                <th>Rol</th>
-                <th>Actualizar</th>
+                {{!-- <th>Rol</th> --}}
+                {{!-- <th>Actualizar</th> --}}
+                <th></th>
                 <th>Eliminar</th>
               </tr>
             </thead>
@@ -36,11 +38,12 @@
             <tbody>
               <tr id="blanco" id="activo" class="heading">
                 <td>{{ID_US}}</td>
+                <td>{{NOMBRE_US}}</td>
                 <td>{{CORREO_US}}</td>
-                <td>{{PUESTO}}</td>
+                {{!-- <td>{{PUESTO}}</td> --}}
                 <td>
 
-                  <button id="mostrarModal" data-id-us={{ID_US}} class="btnCMS">Actualizar</button>
+                  {{!-- <button id="mostrarModal" data-id-us={{ID_US}} class="btnCMS">Actualizar</button>
                   <div id="miModal-{{ID_US}}" class="modal">
                     <div class="modal-contenido">
                       <span class="cerrar-modal" id="cerrarModal-{{ID_US}}">&times;</span>
@@ -61,7 +64,7 @@
                     </div>
                       </form>
                     </div>
-                  </div>
+                  </div> --}}
 
                 </td>
                 <td><button id="btnEliminarUs" data-id-us={{ID_US}} class="btnEle">Eliminar</button></td>

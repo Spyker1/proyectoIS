@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>GameCave</title>
+    <title>Solicitud de cartilla militar</title>
     
     <link rel="stylesheet" href="/css/styles.css">
 
@@ -18,21 +18,21 @@
       {{#each catalogo}}
         <article class="product">
             <a href="/producto/{{NOM_PRO}}"><div class="product-img">
-                <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="producto en venta">
+                <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
             </div>
             </a>
             <div class="product-details">
                 <h2>{{NOM_PRO}}</h2>
                 <p>{{DESC_PRO}}</p>
-                <span class="price">{{formatoNumero PRECIO_PRO}}</span>
+                {{!-- <span class="price">{{formatoNumero PRECIO_PRO}}</span>
                 <br>
                 <span class="cantidad">Cantidad disponible:{{CANT_PRO}}</span>
-                <button id="agregar_carrito" data-product-id={{ID_PRO}} class="button-85">Agregar al carrito</button>
+                <button id="agregar_carrito" data-product-id={{ID_PRO}} class="button-85">Agregar al carrito</button> --}}
             </div>
         </article>
         {{/each}}
          {{else}}
-    <h1>NO HAY PRODUCTOS EN EXISTENCIA</h1>
+    <center><h1>No hay un anuncio todavia, vuelve mas tarde</h1></center>
     {{/if}}
     </section>
 

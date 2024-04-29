@@ -58,7 +58,52 @@ const apoyo={
             console.log(err)
             res.render('')
         }
-    }
+    },
+    ActaNacimiento:async(req,res)=>{
+        try{
+            res.render('Acta_Nacimiento', {
+            })
+        }catch(err){
+            console.log(err)
+            res.render('')
+        }
+    },
+    Com_Domici:async(req,res)=>{
+        try{
+            res.render('Com_Domici', {
+            })
+        }catch(err){
+            console.log(err)
+            res.render('')
+        }
+    },
+    Com_Estudios:async(req,res)=>{
+        try{
+            res.render('Com_Estudios', {
+            })
+        }catch(err){
+            console.log(err)
+            res.render('')
+        }
+    },
+    CURP:async(req,res)=>{
+        try{
+            res.render('CURP', {
+            })
+        }catch(err){
+            console.log(err)
+            res.render('')
+        }
+    },
+    Fotos:async(req,res)=>{
+        try{
+            res.render('Fotos', {
+            })
+        }catch(err){
+            console.log(err)
+            res.render('')
+        }
+    },
 }
 
 module.exports=apoyo

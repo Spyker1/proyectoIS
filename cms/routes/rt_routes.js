@@ -30,8 +30,8 @@ router.post('/rt-agregar-producto', nuevop.rtAgregarP)
 router.post('/rt-eliminar-pro/:id_pro',nuevop.eliminar_pro)
 router.put('/rt-cantidadN/:id/:cantidad', nuevaC.rtNuevac)
 
-router.post('/rt-actulizar-datos-producto',nuevop.actualizar_datos_producto);
-router.post('/rt-agregar-cant-pro/:inp_agregar_cant/:id_pro',nuevop.rt_agregar_cant_pro)
+router.post('/rt-actulizar-datos-producto',nuevop.actualizar_datos_producto)
+// router.post('/rt-agregar-cant-pro/:inp_agregar_cant/:id_pro',nuevop.rt_agregar_cant_pro)
 
 
 //correo envios

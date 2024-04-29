@@ -15,9 +15,9 @@ $('.dropdown .dropdown-menu li').click(function () {
 });
 
  
-$('.dropdown-menu li').click(function () {
-    var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
-    msg = '<span class="msg">Haz escogido: ';
-    $('.msg').html(msg + input + '</span>');
-});
+// $('.dropdown-menu li').click(function () {
+//     var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+//     msg = '<span class="msg">Haz escogido: ';
+//     $('.msg').html(msg + input + '</span>');
+// });
 

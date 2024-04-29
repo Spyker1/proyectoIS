@@ -13,29 +13,43 @@
  <section class="product-list">
       {{#each filtro}}
 
-         <article class="product">
-            <a href="/producto/{{NOM_PRO}}"><div class="product-img">
-                {{!-- {{#if PT_IMG}} --}}
-                <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="producto en venta">
-                {{!-- {{else}} --}}
-                    {{!-- <img class="img-p" src='../assets/imgs/gamecave.png' alt="producto en venta"> --}}
-                {{!-- {{/if}} --}}
+              <div id="imagenContainer" class="container">
+        <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Imagen *</label>
 
-            </div>
-            </a>
-            <div class="product-details">
-                <h2>{{NOM_PRO}}</h2>
-                <p>{{DESC_PRO}}</p>
-                <span class="price">{{formatoNumero PRECIO_PRO}}</span>
-                <br>
-                <span class="cantidad">Cantidad disponible:{{CANT_PRO}}</span>
-                <button id="agregar_carrito" data-product-id={{ID_PRO}} class="button-85">Agregar al carrito</button>
-            </div>
-        </article>
+        <input style="color: blue;" type="file" id="i2" accept="image/*" name="images">
+
+    </div>
+
+    <form id="productoForm" class="container">
+        <h1>Formulario del anuncio</h1>
+        <div class="form-group">
+            <label style="color: red;"  for="nombreProducto">Nombre: *</label>
+            <input type="text" id="nombreProducto" autocomplete="off" required >
+        </div>
+
+        
+ <button type="button" id="guardarProducto" class="btn">Guardar</button>
+    </form>
         {{/each}}
         </article>
          {{else}}
-    <h1>NO HAY PRODUCTOS EN NUESTRO INVENTARIO</h1>
+          <div id="imagenContainer" class="container">
+        <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Imagen *</label>
+
+        <input style="color: blue;" type="file" id="i2" accept="image/*" name="images">
+
+    </div>
+
+    <form id="productoForm" class="container">
+        <h1>Formulario del anuncio</h1>
+        <div class="form-group">
+            <label style="color: red;"  for="nombreProducto">Nombre: *</label>
+            <input type="text" id="nombreProducto" autocomplete="off" required >
+        </div>
+
+        
+ <button type="button" id="guardarProducto" class="btn">Guardar</button>
+    </form>
     {{/if}}
     </section>
         
@@ -43,6 +57,7 @@
 			<ul>
                 {{#each prueba}}
 				<li><a href="/filtro/{{filtro_p}}/{{filtro_f}}?pagina={{id}}" class="active">{{id}}</a></li>
+          
             {{/each}}
 			</ul>
 		</section>

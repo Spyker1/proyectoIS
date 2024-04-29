@@ -20,7 +20,7 @@
 
     
     <div class="btnDerecha">
-            <button class="btnCMS" id="descargarBtn">Reporte productos</button>
+            {{!-- <button class="btnCMS" id="descargarBtn">Reporte productos</button> --}}
             <a href="/agregar-productos"><button class="btnCMS">Agregar nuevo
                 </button></a>
     </div>
@@ -30,11 +30,9 @@
                 <th class="heading">&nbsp;</th>
                 <th>Imagen</th>
                 <th>Nombre</th>
-                <th>Cantidad</th>
-                {{!-- <th>Precio del producto</th> --}}
+                <th>Descripcion</th>
                 {{#if (controlVista puesto)}}
-                <th>Editar</th>
-                <th>Agregar</th>
+                <td></td>
                 <th>Eliminar</th>
                 {{/if}}
               </tr>
@@ -49,28 +47,7 @@
                     >
                 </td>
                 <td>{{NOM_PRO}}</td>
-                <td>{{CANT_PRO}}</td>
-                {{!-- <td>{{PRECIO_PRO}}</td> --}}
-               
-                <td>
-                  <a href="/actualizar-producto/{{NOM_PRO}}"><button class="btnCMS">Editar producto</button></a>
-                </td>
-                <td>
-                  <div class="block_quantity clearfix">
-                    <div class="block_quantity__chooseBlock">
-                      <button class="menos" id="restar" data-id-agr-pro={{ID_PRO}}>-</button>
-                      <input class="centrar" name="centrar" type="text" min="0"  value="1" oninput="validarNumero(this)"
-                        id="input-agregar-cantidad-{{ID_PRO}}">
-                        <p id="mensaje-error" style="color: red;"></p>
-                      <button class="mas" id="sumar" data-id-agr-pro={{ID_PRO}}>
-                          +
-                        </button>
-                    </div>
-                    <div class="cont">
-                      <button class="btnCMS" id="agregar-cant-pro" data-id-pro={{ID_PRO}}>Agregar </button>
-                    </div>
-                  </div>
-                </td>
+                <td>{{DESC_PRO}}</td>
                 <td><button class="btnEle" id="eliminar-pro" data-id-pro={{ID_PRO}}>Eliminar</button></td>
               </tr>
              
