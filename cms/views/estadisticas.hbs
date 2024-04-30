@@ -36,31 +36,71 @@
               {{#each productos}}
               <tr class="heading" id="blanco">
                 <td>{{NOMBRE_CLI}}</td>
-                <td valign="bottom">
-                  <img
-                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
-                    >
+                <td> {{#if catalogo}}
+    <section class="product-list">
+      {{#each catalogo}}
+        <article class="product">
+            <a href="/producto/{{NOM_PRO}}"><div class="product-img">
+                <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
+            </div>
+            </a>
+        </article>
+        {{/each}}
+    {{/if}}
+</td>
+    </section>
+    <td> {{#if catalogo}}
+        <section class="product-list">
+          {{#each catalogo}}
+            <article class="product">
+                <a href="/producto/{{NOM_PRO}}"><div class="product-img">
+                    <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
+                </div>
+                </a>
+            </article>
+            {{/each}}
+        {{/if}}
+    </td>
+        </section>
+        <td> {{#if catalogo}}
+            <section class="product-list">
+              {{#each catalogo}}
+                <article class="product">
+                    <a href="/producto/{{NOM_PRO}}"><div class="product-img">
+                        <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
+                    </div>
+                    </a>
+                </article>
+                {{/each}}
+            {{/if}}
+        </td>
+            </section>
+            <td> {{#if catalogo}}
+                <section class="product-list">
+                  {{#each catalogo}}
+                    <article class="product">
+                        <a href="/producto/{{NOM_PRO}}"><div class="product-img">
+                            <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
+                        </div>
+                        </a>
+                    </article>
+                    {{/each}}
+                {{/if}}
+            </td>
+                </section>
+                <td> {{#if catalogo}}
+                    <section class="product-list">
+                      {{#each catalogo}}
+                        <article class="product">
+                            <a href="/producto/{{NOM_PRO}}"><div class="product-img">
+                                <img class="img-p" src="/producto/{{ID_PRO}}/{{PT_IMG}}" alt="hubo un error al cargar la imagen, vuelve mas tarde">
+                            </div>
+                            </a>
+                        </article>
+                        {{/each}}
+                    {{/if}}
                 </td>
-                <td valign="bottom">
-                  <img
-                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
-                    >
-                </td>
-                <td valign="bottom">
-                  <img
-                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
-                    >
-                </td>
-                <td valign="bottom">
-                  <img
-                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
-                    >
-                </td>
-                <td valign="bottom">
-                  <img
-                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
-                    >
-                </td>
+                    </section>
               </tr>            
             </tbody>
           </table>
@@ -76,8 +116,7 @@
 			</ul>
 		</section>
 
-    {{!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
-    {{!-- <script src="../js/graficas.js"></script> --}}
+
     <script src="../js/btn_cerrar_sesion.js"></script>
     <script src="../js/btn_miCuenta.js"></script>
     <script src="/js/sweetalert2.all.min.js"></script>
