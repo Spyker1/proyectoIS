@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css" />
  
-    <link rel="stylesheet" type="text/css" href="/sitio/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>Crear sesión</title>
 
   </head>
@@ -22,18 +22,21 @@
       <div class="barras"><header><button class="btnCasa"><i class="fa fa-home"></i></button></header></div>
       <div class="Fondo">
         <div class="logos">                
-          <img src="/sitio/assets/img/Tamaulipas.png" alt="Imagen 2"class="tamlogo">
-          <img src="/sitio/assets/img/Escudo.png" alt="Imagen 1" class="escudologo">
+          <img src="/img/Tamaulipas.png" alt="Imagen 2"class="tamlogo">
+          <img src="/img/Escudo.png" alt="Imagen 1" class="escudologo">
         </div>
 
       <form id="formCrearS">
         <div class="mb-3">
+          <br>
+          <br>
+          <br>
           <label style="color: red;" for="usuarioNombre" class="form-label">Nombre(s): *</label>
-          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
-          <br>
+          <input oninput="validarLet(this)"  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
+          
           <label style="color: red;" for="usuarioApellido" class="form-label">Apellidos: *</label>
-          <br>
-          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
+          
+          <input oninput="validarLet(this)"  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
         </div>
         <div class="mb-3">
           <label style="color: red;" for="usuarioCorreo" class="form-label">Correo: *</label>
@@ -41,7 +44,7 @@
         </div>
         <div class="mb-3">
           <label style="color: red;" for="contraseñaUsuario" class="form-label">Contraseña: *</label>
-          <input type="password" class="Inse form-control" maxlength="8" required autocomplete="off" id="contraseñaUsuario" name="contraUs"/>
+          <input type="password" class="Inse form-control"  maxlength="8" required autocomplete="off" id="contraseñaUsuario" name="contraUs"/>
         </div>
         <label style="color: red;" for="contraseñaUsuario" class="form-label">Ciudad: *</label>
         <select class="form-select" aria-label="Default select example" id="ciudad">
@@ -49,18 +52,17 @@
   <option value="Tampico">Tampico</option>
   <option value="Madero">Madero</option>
 </select>
-        <div class="contenido">
-          
-          <label class="Text-checkbox" id="label">
-            Mostrar contraseña
-          </label>
-          <input type="checkbox" name="opcion" id="checkbox"> 
-
+        
+        <div class="signup-link">¿Ya tienes cuenta? <a href="/iniciar-sesion"> Click aquí </a></div>
+        
+        <button type="submit" id="boton" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
 
 
     <script src="/js/escucharBtn.js"></script>
     <script src="/js/crear_sesion.js"></script>
-    <script src="../js/restricciones.js"></script>
+    <script src="/js/restricciones.js"></script>
     <script src="/js/btn_casa.js"></script>
   <script src="/js/sweetalert2.all.min.js"></script>
     <script src="/js/sweetalert2.min.js"></script>

@@ -60,6 +60,7 @@ const transporter = nodemailer.createTransport({
       }
   }
 }
+
 /**
  * Se usaria asi.
  * 
