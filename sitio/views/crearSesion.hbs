@@ -9,51 +9,58 @@
     rel="stylesheet"
     />
  
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/sitio/assets/css/styles.css">
     <title>Crear sesión</title>
 
   </head>
   
   <body id="inicioS">
-    
-    <header>
-        <button class="btnCasa"><i class="fa fa-home"></i></button>
-    </header>
-    
-    <section id="sectI">
-      <h1 id="hS">Bienvenido usuario nuevo</h1>
+    <div class="contenedor1">
+      <div class="barras"><header><button class="btnCasa"><i class="fa fa-home"></i></button></header></div>
+      <div class="Fondo">
+        <div class="logos">                
+          <img src="/sitio/assets/img/Tamaulipas.png" alt="Imagen 2"class="tamlogo">
+          <img src="/sitio/assets/img/Escudo.png" alt="Imagen 1" class="escudologo">
+        </div>
 
-      <form id="formCrearS">
-        <div class="mb-3">
-          <label style="color: red;" for="usuarioNombre" class="form-label">Nombre(s): *</label>
-          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
-          <br>
-          <label style="color: red;" for="usuarioApellido" class="form-label">Apellidos: *</label>
-          <br>
-          <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
-        </div>
-        <div class="mb-3">
-          <label style="color: red;" for="usuarioCorreo" class="form-label">Correo: *</label>
-          <input type="email" class="Inse correo" id="usuarioCorreo" required  autocomplete="off" name="CorreoUs"/>
-        </div>
-        <div class="mb-3">
-          <label style="color: red;" for="contraseñaUsuario" class="form-label">Contraseña: *</label>
-          <input type="password" class="Inse form-control" maxlength="8" required autocomplete="off" id="contraseñaUsuario" name="contraUs"/>
-        </div>
-        <div class="contenido">
+  <section id="sectI">
+    <h1 id="hS">Bienvenido usuario nuevo</h1>
 
-          <label class="Text-checkbox" id="label">
-            Mostrar contraseña
-          </label>
-          <input type="checkbox" name="opcion" id="checkbox"> 
+    <form id="formCrearS">
+      <div class="mb-3">
+        <label style="color: red;" for="usuarioNombre" class="form-label">Nombre(s): *</label>
+        <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioNombre" autocomplete="off" required name="NombreUs"/>
+        <br>
+        <label style="color: red;" for="usuarioApellido" class="form-label">Apellidos: *</label>
+        <br>
+        <input oninput="validarLet"  type="text" class="Inse form-control" id="usuarioApellido" autocomplete="off" name="ApellidoUs"/>
+      </div>
+      <div class="mb-3">
+        <label style="color: red;" for="usuarioCorreo" class="form-label">Correo: *</label>
+        <input type="email" class="Inse correo" id="usuarioCorreo" required  autocomplete="off" name="CorreoUs"/>
+      </div>
+      <div class="mb-3">
+        <label style="color: red;" for="contraseñaUsuario" class="form-label">Contraseña: *</label>
+        <input type="password" class="Inse form-control" maxlength="8" required autocomplete="off" id="contraseñaUsuario" name="contraUs"/>
+      </div>
+      <div class="contenido">
 
-        </div>
- 
-        <div class="signup-link">¿Ya tienes cuenta? <a href="/iniciar-sesion"> Click aquí </a></div>
-        
-        <button type="submit" id="boton" class="btn btn-primary">Enviar</button>
-      </form>
-    </section>
+        <label class="Text-checkbox" id="label">
+          Mostrar contraseña
+        </label>
+        <input type="checkbox" name="opcion" id="checkbox"> 
+
+      </div>
+
+      <div class="signup-link">¿Ya tienes cuenta? <a href="/iniciar-sesion"> Click aquí </a></div>
+      
+      <button type="submit" id="boton" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
+      
+  </div>    
+  <div class="barras"></div>
+
 
 
     <script src="/js/escucharBtn.js"></script>
