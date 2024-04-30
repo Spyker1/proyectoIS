@@ -19,6 +19,11 @@ router.get('/codigo-recuperacion/:correo', [],apoyo.codigoRecuperacion)
 router.get('/carrito',[mdwRtSesion, mdwRtSesionInactiva], views_carrito.carrito)
 router.get('/codigo-verificacion', apoyo.codigoVerificacion)
 router.get('/mi-cuenta',[mdwRtSesion, mdwRtSesionInactiva],apoyo.miCuenta);
+router.get('/acta-nacimineto',[mdwRtSesion, mdwRtSesionInactiva],apoyo.actaNacimiento);
+router.get('/com-domici',[mdwRtSesion, mdwRtSesionInactiva],apoyo.comDomici);
+router.get('/fotos',[mdwRtSesion, mdwRtSesionInactiva],apoyo.Fotos);
+router.get('/com-estudios',[mdwRtSesion, mdwRtSesionInactiva],apoyo.comEstudios);
+router.get('/curp',[mdwRtSesion, mdwRtSesionInactiva],apoyo.curP);
 router.get('/filtro/:filtro_p/:filtro_f',vistas_productos.filtro)
 router.get('/buscador/:buscador',vistas_productos.buscador)
 router.get('/catalogo-productos',vistas_productos.catalogo);
