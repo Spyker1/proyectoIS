@@ -18,8 +18,8 @@ const router = express.Router();
 
 router.get('/', inicio);
 router.get('/session', sesion)
-router.get('/cms-inicio',[mdwRtSesion],cmsInicio.inicio)
-router.get('/Pedidos', [mdwRtSesion] ,cmsInicio.pedidos)
+router.get('/cms-inicio',/*[mdwRtSesion],*/cmsInicio.inicio)
+router.get('/Pedidos', /*[mdwRtSesion] ,*/cmsInicio.pedidos)
 router.get('/Estadisticas',[mdwRtSesion],cmsInicio.estadisticas)
 router.get('/Clientes',[mdwRtSesion],cmsInicio.clientes)
 router.get('/Productos',[mdwRtSesion],cmsInicio.productos)
