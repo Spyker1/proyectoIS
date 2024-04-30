@@ -65,7 +65,6 @@
   img {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f7f7f7;
   }
   
   .header-container {
@@ -399,7 +398,7 @@
 }
 
 input[type=text] {
-  width: 65%;
+  width: 100%;
   -webkit-transition: width 0.15s ease-in-out;
   transition: width 0.15s ease-in-out;
 }
@@ -1695,4 +1694,115 @@ ul {
 }
 #cuenta > a{
   text-decoration: none;
+}
+
+.Fondo{
+  flex: 1;
+  background-color: #f5f5b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+.barras {
+  background-color: #58771e;
+  height: 55px;
+}
+.contenedor1 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.logos {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 0;
+} 
+.tamlogo{
+  height: 15vh;
+  width: 20vw;
+}
+.escudologo{
+height: 15vh;
+width: auto;
+}
+.tablabienvenida{
+  border:2px solid rgb(0, 0, 0);
+  top: 120px;
+  position: relative;
+}
+.login-box {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.login-box input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #58771e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.top-images {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}   
+.formlargo{
+  position: absolute;
+  top: 5px;
+  justify-content: center;
+  z-index: 2;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+#guardarProducto {
+  background-color: #28a745;
+  font-weight: bold;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
 }

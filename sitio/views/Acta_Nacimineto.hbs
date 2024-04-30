@@ -2,26 +2,29 @@
 <html>
 <head>
     <title>Acta de naciento</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/sitio/assets/css/styles.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    
 </head>
 <body class="vi">
-  <header>
-         <button class="btnCasa"><i class="fa fa-home"></i></button>
-        
-    </header>
-
-    <div id="imagenContainer" class="container">
-        <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Imagen *</label>
-
-        <input style="color: blue;" type="file" id="i2" accept="image/*" name="images">
-
-    </div>
-
-
-            
-        <button type="button" id="guardarProducto" class="btn">Guardar</button>
+    <div class="contenedor1">
+        <div class="barras"><header><button class="btnCasa"><i class="fa fa-home"></i></button></header></div>
+        <div class="Fondo">
+          <div class="logos">                
+            <img src="/sitio/assets/img/Tamaulipas.png" alt="Imagen 2"class="tamlogo">
+            <img src="/sitio/assets/img/Escudo.png" alt="Imagen 1" class="escudologo">
+          </div>
+         
+       <div id="imagenContainer" class="container">
+           <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Imagen *</label>
+   
+           <input style="color: blue;" type="file" id="i2" accept="image/*" name="images">
+       </div>      
+           <button type="button" id="guardarProducto" class="btn">Guardar</button>
+          
+    </div>    
+    <div class="barras"></div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
