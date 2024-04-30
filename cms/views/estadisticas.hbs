@@ -15,28 +15,66 @@
         <div class="sidebar">
         </div>
         <div class="content">
-            <div class="graficas">
-                <h2>Productos vendidos</h2>
-                <div class="chart-container">
-                    <canvas class="x" id="productosVendidos"></canvas>
-                </div>
-            </div>
-            <div class="graficas">
-                <h2>Pedidos hechos</h2>
-                <div class="chart-container">
-                    <canvas class="x" id="peidosHechos"></canvas>
-                    <canvas id="peidosHechosSemana"></canvas>
-                </div>
-            </div>
-            <div class="graficas">
-                <h2>Ventas totales</h2>
-                <div class="chart-container">
-                    <canvas class="x" id="ventasTotalesSemana"></canvas>
-                    <canvas class="x" id="ventasTotales"></canvas>
-                </div>
-            </div>
+           <div id="section2">
+
+    
+    <div class="btnDerecha">
+    </div>
+    <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                
+                <th>Nombre Solicitante</th>
+                <th>Acta de nacimiento</th>
+                <th>Comprobante de domicilio</th>
+                <th>Comprobante de estudios</th>
+                <th>CURP</th>
+                <th>Foto(s)</th>
+            </tr>
+            </thead>
+            <tbody>
+              {{#each productos}}
+              <tr class="heading" id="blanco">
+                <td>{{NOMBRE_CLI}}</td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
         </div>
     </div>
+
+    <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Productos?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/graficas.js"></script>
