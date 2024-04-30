@@ -9,34 +9,35 @@ const clientes= {
     try{
 
       const body = req.body;
-      const {nombreCompleto, correo, contraseña, dobleAut} = body;
+      const {nombreCompleto, correo, contraseña, dobleAut,ciudad} = body;
       const correoCl = await cliente.buscar({ correo, contraseña })
       const codiV = aleatorio();
 
       console.log(correoCl);
 
-      const data={
-        to: correo,
-        bcc: 'netoilluminati258@gmail.com',
-        subject: 'BIENVENIDO',
-        template: 'bienvenida',
-        nombreCompleto: nombreCompleto,
-        codigo: codiV,
-      };
+      // const data={
+      //   to: correo,
+      //   bcc: 'netoilluminati258@gmail.com',
+      //   subject: 'BIENVENIDO',
+      //   template: 'bienvenida',
+      //   nombreCompleto: nombreCompleto,
+      //   codigo: codiV,
+      // };
 
       const estado = correoCl.datos.map((element) => element);
       
       if(estado.length){
         return res.json({estatus: 'ERR', message: 'Correo existente U_U'});
       }else{
-        correos.envio(data);
+        // correos.envio(data);
       
         req.session.sesionInactiva = {
           nombreCompleto,
           correo,
           contraseña,
           dobleAut,
-          codigo: codiV
+          codigo: codiV,
+          ciudad
         }
         return res.json({estatus: 'OK', message: 'Correo Valido'});
       }

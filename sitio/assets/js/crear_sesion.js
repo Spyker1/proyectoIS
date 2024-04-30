@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : "",
       contraseña: document.getElementById("contraseñaUsuario").value,
       dobleAut: 0,
+      ciudad:document.getElementById("ciudad").value
     };
 
     if (data.correo === "") return alert("Correo no valido ❌");
