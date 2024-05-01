@@ -26,9 +26,10 @@ const cliente = {
         .input("DOBLE_AUT_CLI", sql.Bit, datos.dobleAut)
         .input("CODIGO_VERIF_CLI", sql.Int, datos.codigoV) //quite datos.codigo
         .input(`FECHA_ALTA_CLI`,sql.NVarChar,date)
+        .input(`CIUDAD`,sql.NVarChar,datos.ciudad)
         .query(
-          `INSERT INTO CLIENTE(ACTIVO_CLI,NOMBRE_CLI,CORREO_CLI,CONTRASEÑA_CLI,DOBLE_AUT_CLI,CODIGO_VERIF_CLI, FECHA_ALTA_CLI) VALUES 
-          (@ACTIVO_CLI,@NOMBRE_CLI,@CORREO_CLI,@CONTRASEÑA_CLI,@DOBLE_AUT_CLI,@CODIGO_VERIF_CLI ,@FECHA_ALTA_CLI)`
+          `INSERT INTO CLIENTE(ACTIVO_CLI,NOMBRE_CLI,CORREO_CLI,CONTRASEÑA_CLI,DOBLE_AUT_CLI,CODIGO_VERIF_CLI, FECHA_ALTA_CLI,CIUDAD) VALUES 
+          (@ACTIVO_CLI,@NOMBRE_CLI,@CORREO_CLI,@CONTRASEÑA_CLI,@DOBLE_AUT_CLI,@CODIGO_VERIF_CLI ,@FECHA_ALTA_CLI,@CIUDAD)`
         );
 
       return objetoResultadoSQL(resultado);

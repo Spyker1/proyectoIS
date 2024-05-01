@@ -59,36 +59,36 @@ const apoyo={
             res.render('')
         }
     },
-    ActaNacimiento:async(req,res)=>{
+    actaNacimiento:async(req,res)=>{
         try{
-            res.render('Acta_Nacimiento', {
+            res.render('acta_nacimineto', {
             })
         }catch(err){
             console.log(err)
             res.render('')
         }
     },
-    Com_Domici:async(req,res)=>{
+    comDomici:async(req,res)=>{
         try{
-            res.render('Com_Domici', {
+            res.render('com_domici', {
             })
         }catch(err){
             console.log(err)
             res.render('')
         }
     },
-    Com_Estudios:async(req,res)=>{
+    comEstudios:async(req,res)=>{
         try{
-            res.render('Com_Estudios', {
+            res.render('com_estudios', {
             })
         }catch(err){
             console.log(err)
             res.render('')
         }
     },
-    CURP:async(req,res)=>{
+    curP:async(req,res)=>{
         try{
-            res.render('CURP', {
+            res.render('curp', {
             })
         }catch(err){
             console.log(err)
@@ -97,7 +97,7 @@ const apoyo={
     },
     Fotos:async(req,res)=>{
         try{
-            res.render('Fotos', {
+            res.render('fotos', {
             })
         }catch(err){
             console.log(err)

@@ -23,13 +23,13 @@ const codigoVerif = {
                     return res.json({estatus: 'OK', message: 'BIENVENIDO A GAMECAVE ^0^'})
                 }
             }else if(req.session.sesionInactiva){
-                const {nombreCompleto, correo, contraseña, dobleAut,codigo} = req.session.sesionInactiva
+                const {nombreCompleto, correo, contraseña, dobleAut,codigo,ciudad} = req.session.sesionInactiva
                 console.log(codigo)
 
                 if(comparar(codiV, codigo)){
                     
                     console.log('Codigo correcto')
-                    cliente.agregar({nombreCompleto, correo, contraseña, dobleAut, codigoV: 0})
+                    cliente.agregar({nombreCompleto, correo, contraseña, dobleAut, codigoV: 0,ciudad})
                     
                     req.session.destroy()
                     

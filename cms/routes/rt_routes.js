@@ -33,7 +33,7 @@ router.put('/rt-cantidadN/:id/:cantidad', nuevaC.rtNuevac)
 router.post('/rt-actulizar-datos-producto',nuevop.actualizar_datos_producto)
 // router.post('/rt-agregar-cant-pro/:inp_agregar_cant/:id_pro',nuevop.rt_agregar_cant_pro)
 
-
+router.post('/imagenes/:id_pro', nuevop.imagen)
 //correo envios
 router.post('/rt-reenviar-correo-pedidos/:id_ped',envios.rtReenviarCorreo);
 

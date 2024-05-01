@@ -48,6 +48,7 @@ router.post('/rt-desactivar-doble-autenticacion',doble_autenticacion.rtDesactiva
 
 //imagenes
 router.post('/imagenes/:id_pro', imagenes.agregar)
+router.post('/rt-agregar-imagenes',imagenes.cms)
 
 module.exports = router
 

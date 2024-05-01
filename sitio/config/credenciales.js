@@ -1,7 +1,7 @@
 const sqlConfig = {
     user: 'sa',
     password: 'sasa',
-    database: 'GAMECAVE',
+    database: 'CARTILLA',
     server: 'localhost',
     port: 1433,
     pool: {

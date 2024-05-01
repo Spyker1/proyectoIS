@@ -1,5 +1,6 @@
 const { Decimal, Numeric } = require('mssql');
 const {producto} = require('../../db/db');
+const imagenes = require('../../../sitio/controllers/controllers_rt/ctrl_imagenes');
 
 const nuevop = {
     rtAgregarP: async(req, res) =>{
@@ -78,6 +79,42 @@ const nuevop = {
         } catch (error) {
             console.log(error);
             return res.json({estatus:'ERR',message:`ERROR AL ACTUALIZAR`})
+        }
+    },
+    imagen:async(req,res)=>{
+        try {
+            const folderID=req.params.id_pro;
+            
+            const folderPath= path.join('Productos',folderID);
+
+            if(!fs.existsSync(folderPath)){
+                fs.mkdirSync(folderPath,{recursive:true})
+            }
+            const uploadFile=req.files.images;
+            
+            var name = '';
+            let check = true;
+            let i = 1;
+            while (check) {
+                if(!fs.existsSync(path.join(folderPath, folderID, folderID,'-',String(i)))){
+                    check = false;
+                    name = String(req.params.id_pro+'-'+i);
+                }
+                i++    
+            }
+
+            console.log(req.files)
+            uploadFile.mv(path.join(folderPath, name=name.concat(nombreArchivo(uploadFile.name))),(err)=>{
+                if(err){
+                    return res.status(500).send(err);
+                }
+
+                console.log(uploadFile.data)
+                productos.agregar_imagen({id: folderID, imagen: name})
+                return res.json({estatus: 'OK', message:'Imagen cargada con exito'})
+            })  
+        } catch (error) {
+            console.log(error)
         }
     }
 }

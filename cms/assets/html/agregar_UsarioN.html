@@ -1,53 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" id="x">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Agregar Nuevo Usario</title>
+    <title>Archivos de los solitantes</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body id="b">
-    <div class="login-box">
-        <h2 class="animate">Agregar Usario</h2>
-        <form>
-            <div class="user-box">
-                <input type="text" name="" required="">
-                <label>Correo Electronico</label>
-            </div>
-            
-            <div class="user-box">
-                <div class="container">
-                <div class="dropdown">
-                    <div class="select">
-                      <span>Seleciona un Rol</span>
-                    </div>
-                    <input type="hidden" name="opc">
-                    <ul class="dropdown-menu">
-                      <li value="Admistrador">Admistrador</li>
-                      <li value="General">General</li>
-                    </ul>
-                  </div>
-                </div>
-              <span class="msg"></span>
-            </div>
-            
-            <br><br>
-            <div class="centrar">   
-                <button id="agregarUsuario" class="as">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Agregar
-                </button>   
-            </div> 
-        </form>
+<body>
+    {{>header}}
+    <div class="main-container">
+        <div class="sidebar">
+        </div>
+        <div class="content">
+           <div id="section2">
+
+    
+    <div class="btnDerecha">
     </div>
-       
+    <table id="miTabla" class="tablasCMS">
+            <thead>
+              <tr>
+                
+                <th>Nombre Solicitante</th>
+                <th>Acta de nacimiento</th>
+                <th>Comprobante de domicilio</th>
+                <th>Comprobante de estudios</th>
+                <th>CURP</th>
+                <th>Foto(s)</th>
+            </tr>
+            </thead>
+            <tbody>
+              {{#each productos}}
+              <tr class="heading" id="blanco">
+                <td>{{NOMBRE_CLI}}</td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+                <td valign="bottom">
+                  <img
+                    src="http://localhost:3000/producto/{{ID_PRO}}/{{PT_IMG}}" alt="archivo"
+                    >
+                </td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
+        </div>
+    </div>
+
+    <section class="paginacion">
+			<ul>
+                {{#each pag_pro}}
+				<li><a href="/Productos?pagina={{this}}" class="active">{{this}}</a></li>
+                {{/each}}
+			</ul>
+		</section>
+
+    {{!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> --}}
+    {{!-- <script src="../js/graficas.js"></script> --}}
+    <script src="../js/btn_cerrar_sesion.js"></script>
+    <script src="../js/btn_miCuenta.js"></script>
+    <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../js/opcionesU.js"></script>
+
 </html>

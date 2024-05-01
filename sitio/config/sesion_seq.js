@@ -5,7 +5,7 @@ const SequelizeStorage = require("connect-session-sequelize")(session.Store);
 const init = () => {
   if (process.env.CONN_BASE_) {
     const sequelizeStorage = new SequelizeStorage({
-      db: new Sequelize('GameCave', 'sa', 'sasa', {
+      db: new Sequelize('CARTILLA', 'sa', 'sasa', {
         host: 'localhost',
         port: 1433,
         dialect: "mssql",
@@ -39,7 +39,7 @@ const init = () => {
     });
   } else {
     const sequelizeStorage = new SequelizeStorage({
-      db: new Sequelize('GameCave', 'sa', 'sasa',
+      db: new Sequelize('CARTILLA', 'sa', 'sasa',
         {
           host: 'localhost',
           port: 1433,

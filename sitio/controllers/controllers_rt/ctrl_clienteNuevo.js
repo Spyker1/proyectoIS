@@ -9,7 +9,7 @@ const clientes= {
     try{
 
       const body = req.body;
-      const {nombreCompleto, correo, contraseña, dobleAut} = body;
+      const {nombreCompleto, correo, contraseña, dobleAut,ciudad} = body;
       const correoCl = await cliente.buscar({ correo, contraseña })
       const codiV = aleatorio();
 
@@ -36,7 +36,8 @@ const clientes= {
           correo,
           contraseña,
           dobleAut,
-          codigo: codiV
+          codigo: codiV,
+          ciudad
         }
         return res.json({estatus: 'OK', message: 'Correo Valido'});
       }

@@ -225,8 +225,9 @@ const cliente={
             const resultado=await sqlConn.request()
             .input(`OFfSET`, sql.Int, datos.ofset)
             .input(`POR_PAG`, sql.Int, datos.por_pagina)
-            .query(`(SELECT NOMBRE_CLI,FORMAT(FECHA_ALTA_CLI,'dd/MM/yy hh:mm:ss') AS FECHA_ALTA_CLI,ACTIVO_CLI,CORREO_CLI FROM CLIENTE)
-            ORDER BY ID_CLI OFFSET @OFFSET ROWS  FETCH NEXT @POR_PAG ROWS ONLY`)
+            .input(`CIUDAD`,sql.NVarChar,datos.ciudad)
+            .query(`SELECT CIUDAD,NOMBRE_CLI,FORMAT(FECHA_ALTA_CLI,'dd/MM/yy hh:mm:ss') AS FECHA_ALTA_CLI,ACTIVO_CLI,CORREO_CLI FROM CLIENTE WHERE CIUDAD=@CIUDAD
+            ORDER BY ID_CLI OFFSET @OFFSET ROWS  FETCH NEXT @POR_PAG ROWS ONLY `)
 
             const total_productos = await sqlConn
             .request()

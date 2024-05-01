@@ -1,4 +1,4 @@
-USE GAMECAVE;
+USE CARTILLA;
 
 SELECT * FROM USUARIO;
 SELECT * FROM CLIENTE;
@@ -25,4 +25,4 @@ DROP TABLE DETALLES_PEDIDOS;
 
 select [dbo].[OBTENER_FECHA]()
 
-insert into usuario(CORREO_US,CONTRASEÑA_US,puesto) values('leonardo.cantulara@hotmail.com','1234','Administrador')
+insert into usuario(CORREO_US,CONTRASEÑA_US,puesto) values('leonard.cantulara@hotmail.com','1234','Militar')
