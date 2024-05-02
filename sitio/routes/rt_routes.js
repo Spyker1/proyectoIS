@@ -11,6 +11,7 @@ const { doble_autenticacion } = require('../controllers/controllers_rt/ctrl_dobl
 const  codigoVerif = require('../controllers/controllers_rt/ctrl_codigo_verif');
 const contraseña = require('../controllers/controllers_rt/ctrl_recuperar_contra');
 const imagenes = require('../controllers/controllers_rt/ctrl_imagenes');
+const { archivos } = require('../controllers/controllers_rt/ctrl_subirDatos');
 
 const router = Router();
 
@@ -49,6 +50,9 @@ router.post('/rt-desactivar-doble-autenticacion',doble_autenticacion.rtDesactiva
 //imagenes
 router.post('/imagenes/:id_pro', imagenes.agregar)
 router.post('/rt-agregar-imagenes',imagenes.cms)
+
+//Archivos
+router.post('/subir-archivo', archivos.archivo)
 
 module.exports = router
 

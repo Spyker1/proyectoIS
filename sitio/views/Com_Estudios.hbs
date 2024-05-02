@@ -14,14 +14,15 @@
             <img src="/img/Tamaulipas.png" alt="Imagen 2"class="tamlogo">
             <img src="/img/Escudo.png" alt="Imagen 1" class="escudologo">
           </div>
-    <div id="imagenContainer" class="container">
-        <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Archivo *</label>
 
-        <input style="color: blue;" type="file" id="i2" accept="image/*" name="images">
-
-    </div>
-       
-        <button type="button" id="guardarProducto" class="btn">Guardar</button>
+          <form id="form" name="comp-estudios">
+            <div id="imagenContainer" class="container">
+                <label style="color: green;"  for="imagenInput" id="agregarImagenLabel">Agregar Archivo *</label>
+                <input style="color: blue;" type="file" id="i2" accept="application/pdf" name="documento">
+            </div>
+            
+            <button type="button" id="guardarProducto" class="btn">Guardar</button>
+          </form>
 
     </div>    
     <div class="barras"></div>
@@ -31,6 +32,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../js/btn_casa.js"></script>
-<script src="../js/enviar_imagen.js"></script>
-
+<script src="../js/archivos/envio_archivos.js"></script>
+<script src="../js/sweetalert2.min.js"></script>
 </html>

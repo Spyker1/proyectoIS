@@ -37,6 +37,20 @@ const cliente = {
       throw err;
     }
   },
+  clienteXid: async(datos)=>{
+    try {
+      const resultado = await sqlConn.request()
+      .input('ID_CLI', sql.Int, datos.id)
+      .query(`
+        SELECT NOMBRE_CLI AS NOMBRE 
+        FROM CLIENTE WHERE ID_CLI = @ID_CLI
+      `)
+
+      return objetoResultadoSQL(resultado)
+    } catch (error) {
+      throw error
+    }
+  },
   actualizar: async (datos,id) => {
     try {
       let resultado = await sqlConn
@@ -78,8 +92,7 @@ const cliente = {
     } catch (err) {
       throw err;
     }
-  }
-  ,
+  },
   buscar_id:async(datos)=>{
     try{
       let resultado=await sqlConn.request()
@@ -91,8 +104,7 @@ const cliente = {
       throw err;
     }
   },
-
-    buscarCorreo:async(datos)=>{
+  buscarCorreo:async(datos)=>{
         try {
             const resultado=await sqlConn.request()
             .input('ACTIVO_CLI',sql.Bit,0)
@@ -108,8 +120,8 @@ const cliente = {
         }catch(err){
             throw err;
         }
-    },
-    insertarCodigoV:async(datos)=>{
+  },
+  insertarCodigoV:async(datos)=>{
         try {
   
           const resultado = await sqlConn.request()
@@ -122,8 +134,8 @@ const cliente = {
           } catch (err) {
             throw err;
         }
-    },
-    eliminarCodigoV:async(datos)=>{
+  },
+  eliminarCodigoV:async(datos)=>{
         try {
             const resultado = await sqlConn.request()
   
@@ -134,8 +146,8 @@ const cliente = {
         } catch (err) {
             throw err;
         }
-    },
-    codigoRecuperacion: async(datos) =>{
+  },
+  codigoRecuperacion: async(datos) =>{
       try {
         
         const resultado = await sqlConn.request()
@@ -148,7 +160,7 @@ const cliente = {
       } catch (err) {
         throw err;
       }
-    },
+  },
   borrar:async(datos)=>{
         try{
             let resultado=await sqlConn.request()
@@ -161,6 +173,7 @@ const cliente = {
       throw err;
     }
   },
+
 };
 
 const productos = {

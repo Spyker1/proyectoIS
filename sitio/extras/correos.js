@@ -61,6 +61,42 @@ const transporter = nodemailer.createTransport({
   }
 }
 
+  const correosArchivos = {
+    envio: async (data, callback)=> {
+      try {
+        transporter.use('compile', hbs(optionsHbs))
+        transporter.sendMail({
+          from: 'leonardo.cantulara@hotmail.com',
+          to: data.to,
+          cc: data.cc,
+          bcc: data.bcc,
+          subject: data.subject,
+          template: data.template,
+          attachments:{
+            filename: data.nombreArchivo ?data.nombreArchivo :'',
+            content: data.info? data.info: ''
+          },
+          context: {
+
+            ...data
+
+          }
+        }, (err, info) => {
+          if (err) {
+            console.log('error enviando correo')
+            callback({ estado: 0, err })
+            return
+          }
+          console.log('Correo enviado correctamente')
+          callback({ estado: 1, info })
+      });
+    } catch (error) {
+        console.log('Catch');
+        callback({estado: 0, err})
+      }
+    }
+  }
+
 /**
  * Se usaria asi.
  * 
@@ -89,4 +125,4 @@ const enviarCorreo = (req = request, res = resp) => {
   correo.envio(data);
 }
 */
-module.exports = correos;
+module.exports = {correos, correosArchivos};
