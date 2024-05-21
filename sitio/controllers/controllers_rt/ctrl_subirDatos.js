@@ -21,7 +21,7 @@ const archivos = {
             if (documento.mimetype === 'application/pdf') {
                 correosArchivos.envio({
                     to: ['alexrdz1221@gmail.com'],
-                    bcc: 'netoilluminati258@gmail.com',
+                    bcc: 'alexrdz1221@gmail.com',
                     subject: tipo.subject,
                     template: 'documento',
                     nombreArchivo: tipo.nombreArchivo,
